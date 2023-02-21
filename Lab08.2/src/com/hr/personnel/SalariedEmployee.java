@@ -23,6 +23,11 @@ public class SalariedEmployee extends Employee {
     public void pay() {
         System.out.println(getName() + " is paid salary. Monthly pay is " + (getSalary() / 12) + " (before taxes!)" );
     }
+
+    public void takeVacation() {
+        System.out.println(getName() + " is on vacation");
+    }
+
     // accessor methods
 
     public double getSalary() {

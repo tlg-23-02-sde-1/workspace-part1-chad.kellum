@@ -54,9 +54,27 @@ public class Department {
             employees[i].work();
         }
     }
-    public void payEmployee(){
+    public void payEmployee() {
         for (int i = 0; i < currentIndex; i++) {
             employees[i].pay();
+        }
+    }
+
+    // "Forced vacation." That is, for all employees that take vacation (SalariedEmployees)
+    public void holidayBreak() {
+        for (int i = 0; i < currentIndex; i++) {
+            // downcast the Employee reference (employees[i] to specific type SalariedEmployee)
+            // then we can call SalariedEmployee-specific
+
+            // First, we "ask" employees[i], "are you really a SalariedEmployee?"
+            // NOTE: instanceof does an IS-A check (so
+            if (employees[i] instanceof SalariedEmployee) {
+                // downcast and method call in one shot
+                // ((SalariedEmployee) employees[i]).takeVacation();
+
+                SalariedEmployee semp = (SalariedEmployee) employees[i];
+                semp.takeVacation();
+            }
         }
     }
 
