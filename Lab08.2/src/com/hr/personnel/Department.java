@@ -31,9 +31,11 @@ public class Department {
 
     // constructors
     public Department() {
+        super();
     }
 
     public Department(String name, String location) {
+        super();
         setName(name);
         setLocation(location);
     }
@@ -50,6 +52,11 @@ public class Department {
     public void workEmployees() {
         for (int i = 0; i < currentIndex; i++) {
             employees[i].work();
+        }
+    }
+    public void payEmployee(){
+        for (int i = 0; i < currentIndex; i++) {
+            employees[i].pay();
         }
     }
 
@@ -76,6 +83,7 @@ public class Department {
     }
 
     public String toString() {
-        return "Department: name=" + getName() + ", location=" + getLocation();
+        return getClass().getSimpleName() + ": name=" + getName() + ", location=" +
+                getLocation();
     }
 }

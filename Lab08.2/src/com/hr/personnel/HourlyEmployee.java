@@ -7,9 +7,11 @@ public class HourlyEmployee extends Employee {
     private double rate;
     private double hours;
 
+    // constructors
     public HourlyEmployee() {
-
+         super();                   // constructor chaining. This super is automatically put in the ctor whether it is visible or not.
     }
+
 
     public HourlyEmployee(String name, LocalDate hireDate) {
         super(name, hireDate);
@@ -20,7 +22,14 @@ public class HourlyEmployee extends Employee {
         setRate(rate);
         setHours(hours);
     }
+    // business methods
+    @Override
+    public void pay() {
+        System.out.println(getName() + " is paid hourly, and one week's pay is " +
+               (getRate() * getHours()) + " (before taxes!)");
+    }
 
+    // accessor methods
     public double getRate() {
         return rate;
     }
@@ -36,8 +45,11 @@ public class HourlyEmployee extends Employee {
     public void setHours(double hours) {
         this.hours = hours;
     }
+
+
+    @Override
     public String toString() {
-        return "Employee: name=" + getName() + ", hireDate=" + getHireDate() + ", rate of pay=" + getRate() +
+        return super.toString() + ", rate of pay=" + getRate() +
                 ", hours per week=" + getHours();
     }
 }
