@@ -21,4 +21,5 @@ public interface TaxPayer {
     public static final double SALARIED_TAX_RATE = 0.30;
     
     public void payTaxes();
+
 }
