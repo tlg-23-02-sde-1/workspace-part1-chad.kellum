@@ -30,6 +30,11 @@ public class SalariedEmployee extends Employee {
         System.out.println(getName() + " is on vacation");
     }
 
+    @Override
+    public void fileReturn() {
+        System.out.println("Return filed electronically");
+    }
+
     // accessor methods
 
     public double getSalary() {

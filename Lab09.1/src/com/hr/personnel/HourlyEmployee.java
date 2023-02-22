@@ -49,17 +49,17 @@ public class HourlyEmployee extends Employee  {
         this.hours = hours;
     }
 
+    @Override
+    public void payTaxes() {
+        double taxes = (getRate() * getHours()) * HOURLY_TAX_RATE;
+        System.out.println(getName() + " paid taxes of " + taxes);
+    }
+
 
     @Override
     public String toString() {
         return super.toString() + ", rate of pay=" + getRate() +
                 ", hours per week=" + getHours();
-    }
-
-    @Override
-    public void payTaxes() {
-        double taxes = (getRate() * getHours()) * HOURLY_TAX_RATE;
-        System.out.println(getName() + " paid taxes of " + taxes);
     }
 
 }

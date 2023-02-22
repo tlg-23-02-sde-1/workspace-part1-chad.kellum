@@ -22,4 +22,8 @@ public interface TaxPayer {
     
     public void payTaxes();
 
+    default public void fileReturn() {
+        System.out.println("Return filed by US Mail");
+    }
+
 }
