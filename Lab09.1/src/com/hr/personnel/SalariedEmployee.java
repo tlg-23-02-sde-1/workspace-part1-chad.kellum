@@ -7,6 +7,7 @@ import java.time.LocalDate;
 public class SalariedEmployee extends Employee {
 
     private double salary;
+    private double STANDARD_DEDUCTION = 10_000.0;
 
     // constructors
     public SalariedEmployee() {
@@ -33,6 +34,11 @@ public class SalariedEmployee extends Employee {
     @Override
     public void fileReturn() {
         System.out.println("Return filed electronically");
+    }
+
+    @Override
+    public double getStandardDeduction() {
+        return STANDARD_DEDUCTION;
     }
 
     // accessor methods

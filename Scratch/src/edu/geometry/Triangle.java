@@ -12,7 +12,8 @@ public class Triangle implements Shape{
 
     @Override
     public void area() {
-        System.out.println("A triangle's area is 1/2 of base * height= " + ((getBase()/2) * getHeight()));
+        System.out.println("A triangle's area is 1/2 of " + getBase() + " * " + getHeight() + " = " +
+                ((getBase()/2) * getHeight()) + " sq. inches");
     }
 
     public double getBase() {

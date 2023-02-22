@@ -26,7 +26,8 @@ public class Rectangle implements Shape {
     }
     @Override
     public void area(){
-        System.out.println("The area of a rectangle is length * width= " + (getLength() * getWidth()));
+        System.out.println("The area of the rectangle is " + getLength() + " * " + getWidth() + " = "+
+                (getLength() * getWidth()) + " sq. inches");
     }
     @Override
     public String toString() {
