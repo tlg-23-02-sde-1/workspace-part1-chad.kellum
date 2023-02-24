@@ -1,6 +1,8 @@
 package com.duckrace;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 class DuckRacer {
@@ -44,10 +46,17 @@ class DuckRacer {
     public int getWins(){
         return rewards.size();
     }
+    // NOTE: We are returning a direct reference to our list <Reward>
+    // This could have undesired effects: the client can add/remove/ clear the List
+//    public List<Reward> getRewards() {
+//        return rewards;
+//    }
+
 
     public List<Reward> getRewards() {
-        return rewards;
+        return Collections.unmodifiableList(rewards);
     }
+
     @Override
     public String toString(){
         return String.format("%s: ID= %s, Name= %s, Wins= %s, Rewards= %s", getClass().getSimpleName(),
