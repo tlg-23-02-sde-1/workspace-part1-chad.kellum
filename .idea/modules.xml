@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DuckRace/DuckRace.iml" filepath="$PROJECT_DIR$/DuckRace/DuckRace.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab 10.1-Television/Lab 10.1-Television.iml" filepath="$PROJECT_DIR$/Lab 10.1-Television/Lab 10.1-Television.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab 11.1/Lab 11.1.iml" filepath="$PROJECT_DIR$/Lab 11.1/Lab 11.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab01.1/Lab01.1.iml" filepath="$PROJECT_DIR$/Lab01.1/Lab01.1.iml" />
